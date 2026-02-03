@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--FONTS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>Personal Portfolio</title>
+</head>
+
+
+<body>
+    
+    <!--HEADER SECTION-->
+    <header>
+
+        <div class="profile">
+            
+            <img src="assets/images/pro-selfie.png" alt="">
+            <h1>Anthony Arroyo</h1>
+            <div class="social-icons">
+
+                
+                <a href="https://github.com/TonyArroyo575" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tony-arroyo-4111bb1b2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--NAV-->
+        <nav>
+
+            <ul>
+
+                <li><a href="#" class="active"><i class="fa-solid fa-house"></i>Home</a></li><hr><br>
+                <li><a href="#about"><i class="fa-solid fa-user-astronaut"></i>About</a></li><hr><br>
+                <li><a href="#skills"><i class="fa-solid fa-laptop-code"></i>Tech Skills</a></li><hr><br>
+                <li><a href="#portfolio"><i class="fa-solid fa-check-double"></i>Notable Achievements</a></li><hr><br>
+                <li><a href="#services"><i class="fa-solid fa-server"></i>Services</a></li><hr><br>
+                <!-- <li><a href="#contact"><i class="fa-solid fa-address-book"></i>Contact</a></li><hr><br> -->
+            </ul>   
+
+
+
+
+            <!--Footer-->
+            <div class="footer">
+                <p>&copy; Copyright 2026 <br>Designed By Anthony Arroyo</p>
+            </div>       
+        </nav>
+    </header>
+
+
+    <i class="fa-solid fa-bars" id="menuBtn" aria-label="Toggle menu"></i>
+
+
+    <!--ALL BODY CONTENT-->
+    <main>
+         <!--HOME SECTION-->
+        <section id="home">
+            <div class="home-based-in">
+                <p class="based-in">BASED <br>In The<br>U.S.A.</p>
+            </div>
+            <div class="home-row">
+                
+                <h1>Hi, I'm <br>Anthony <span>.</span></h1>
+                <p class="sub-para"><span id="auto-input"></span></p><br>
+                <!-- <a href="assets/documents/ab.resume.pdf" class="btn">Download Resume</a> -->
+
+                <!-- Resume Download Modal -->
+                <a href="assets/documents/AA.Resume.pdf" 
+                download="Anthony-Arroyo-Resume.pdf" 
+                class="btn">
+                    View My Resume <i class="fa-solid fa-download" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+
+        </section>
+        
+        <!--===================ABOUT SECTION===================-->
+        <section id="about">
+            
+            <h1 class="sub-heading">About Me</h1>
+            <div class="divider"></div>
+            <!-- <p class="sub-para">Some information about me...</p> -->
+
+            <div class="about-col">
+                <div class="img-col">
+                        <img src="assets/images/cigar.jpg" alt="">
+                </div>
+
+                <div class="info-col">
+                    <!-- <h2>QA Architect</h2> -->
+                    <p>I'm Antonio Bellifemine, a self-taught engineer based in the Tampa Bay area. Originally from New Jersey, I'm a proud first-generation American.
+                        Before relocating to Florida and pivoting to engineering, I was a baker appearing on Cake Boss for 6 seasons as "Cousin Anthony."
+                        Martial arts and fitness are huge passions; I love training, and teaching others (proud BJJ Black Belt 🥋). When I'm not on the mats, 
+                        or doing kettlebells you'll find me cooking, coding side projects, or learning something new.
+                        <br><br> 
+                        I'm also a big fan of great coffee and cigars, and living in Cigar City 
+                        means I'm never far from world-class spots like those in Ybor. Thanks for checking out my portfolio! I'm excited about new projects and always 
+                        open to collaborating. Feel free to reach out for work, questions, or just to connect, my social handles are in the sidebar!</p>
+                    <div class="icon-list-col">
+
+                        <div class="icon-list">
+                            <ul>
+                                <li><i class="fa-solid fa-angles-right"></i><strong>Full Name:</strong><span>Antonio Bellifemine</span></li>
+                                <li><i class="fa-solid fa-angles-right"></i><strong>Age:</strong><span>35</span></li>
+                                <li><i class="fa-solid fa-angles-right"></i><strong>Hobbies:</strong>
+                                    <span>Brazilian Jiu-Jitsu | Kettle Bells | Cooking | Hiking | Coffee | Cigars</span>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!-- <button class="work-with-me-btn btn"><i class="fa-solid fa-handshake"></i> Say Hello</button> -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Work With Me Modal -->
+        <div id="workWithMeModal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <h3>Let's Work Together</h3>
+                <form id="workWithMeForm">
+                    <label for="workName">Name <span class="required">*</span></label>
+                    <input type="text" id="workName" name="name" placeholder="Your Name" required><br><br>
+
+                    <label for="workEmail">Email <span class="required">*</span></label>
+                    <input type="email" id="workEmail" name="email" placeholder="Your Email" required><br><br>
+
+                    <label for="workPhone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="workPhone" name="phone" placeholder="Your Phone Number" required><br><br>
+
+                    <label for="workMessage">Project Details / Message <span class="required">*</span></label>
+                    <textarea id="workMessage" name="user_message" rows="5" placeholder="A brief description of what we'll work on together" required></textarea><br><br>
+
+                    <button type="submit" class="btn">Let's Chat</button>
+                </form>
+                <button id="closeWorkModal" class="close-btn">×</button>
+            </div>
+        </div>
+
+ 
+
+        <!--===================SKILLS SECTION===================-->
+
+        <section id="skills">
+    <h1 class="sub-heading">Tech Skills</h1>
+    <div class="divider"></div>
+
+    <div class="skills-row">
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/JavaScript.png" alt="JavaScript" class="skill-logo">
+                <h2>JavaScript</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/TypeScript.png" alt="TypeScript" class="skill-logo">
+                <h2>TypeScript</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Node.js.png" alt="Node.js" class="skill-logo">
+                <h2>Node</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Docker.png" alt="Docker" class="skill-logo">
+                <h2>Docker</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/HTML5.png" alt="HTML5" class="skill-logo">
+                <h2>HTML</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Git.png" alt="Git" class="skill-logo">
+                <h2>Git</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/GitHubActions.png" alt="CI/CD" class="skill-logo">
+                <h2>CI/CD</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/CSS3.png" alt="CSS3" class="skill-logo">
+                <h2>CSS</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/PostgresSQL.png" alt="Java" class="skill-logo">
+                <h2>SQL</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Python.png" alt="Python" class="skill-logo">
+                <h2>Python</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Powershell.png" alt="Java" class="skill-logo">
+                <h2>Powershell</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Bash.png" alt="Java" class="skill-logo">
+                <h2>Bash</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Java.png" alt="Java" class="skill-logo">
+                <h2>Java</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/AWS.png" alt="Java" class="skill-logo">
+                <h2>AWS</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Azure.png" alt="Java" class="skill-logo">
+                <h2>Azure</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/mac.png" alt="Java" class="skill-logo">
+                <h2>Mac</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Linux.png" alt="Java" class="skill-logo">
+                <h2>Linux</h2>
+            </div>
+        </div>
+
+        <div class="skills-box">
+            <div class="skills-info">
+                <img src="assets/images/logos/Windows11.png" alt="Java" class="skill-logo">
+                <h2>Windows</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+        
+
+
+
+        <!--PORTFOLIO SECTION-->
+        <section id="portfolio">
+            <h1 class="sub-heading">Projects</h1>
+            <div class="divider"></div>
+            <!-- <p class="sub-para">Notable Achievements</p>  -->
+            
+            <div class="port-row">
+
+                <div class="port-item">
+                    <div class="port-img">
+                        <img src="assets/images/trustlayer.png" alt="">
+                    </div>
+
+                    <div class="port-info">
+
+                        <h4>Trustlayer | 2021</h4>
+                        <p>View Trustlayer Hot Fix Reduction Burndown</p>
+                        <a href="https://www.canva.com/design/DAG9yZx1VzY/EdwVb0oUY7rZPGa_BaU5Ew/view?utm_content=DAG9yZx1VzY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=had9bec82d3"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="port-item">
+                    <div class="port-img">
+                        <img src="assets/images/ed.png" alt="">
+                    </div>
+
+                    <div class="port-info">
+
+                        <h4>Explore Digits | 2024</h4>
+                        <p>View Phase 1 results Executive Summary</p>
+                        <a href="https://www.notion.so/Explore-Digits-24e614d88d7b80068e99e68d5e3a84f6?source=copy_link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="port-item">
+                    <div class="port-img">
+                        <img src="assets/images/coauthor.webp" alt="">
+                    </div>
+
+                    <div class="port-info">
+
+                        <h4>Coauthor.co | 2025</h4>
+                        <p>As a co-founder of Coauthor.co, we're proud to announce coauthor is now live in production with Beta users</p>
+                        <a href="https://coauthor.co"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                
+            
+            </div>
+
+
+        </section>
+
+
+
+
+        <!--FACTS SECTION-->
+        <section id="fact">
+
+            <h1 class="sub-heading">Facts</h1>
+            <div class="divider"></div>
+            <!-- <p class="sub-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+
+            <div class="fact-row">
+
+                <div class="fact-box">
+                <i class="fa-solid fa-face-smile"></i>
+                    <strong>6+</strong>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="fact-box">
+                <i class="fa-solid fa-recycle"></i>
+                    <strong>Team | Stack | Domain</strong>
+                    <p>Agnostic</p>
+                </div>
+
+<!-- 
+                <div class="fact-box">
+                <i class="fa-solid fa-file-code"></i>
+                    <strong>5+</strong>
+                    <p>Domains</p>
+                </div> -->
+
+                <div class="fact-box">
+                <i class="fa-solid fa-dollar-sign"></i>
+                    <strong>Hundreds of thousands</strong>
+                    <p>of Dollars Saved</p>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+    </main>
+
+    <!--TYPED JS (for typing effect)-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!--MAIN JS-->
+    <script src="main.js"></script>
+
+</body>
+</html>
