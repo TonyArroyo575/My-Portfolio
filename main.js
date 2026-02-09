@@ -29,8 +29,12 @@ let typed = new Typed("#auto-input", {
   strings: [
     ".NET Developer",
     "Husband",
+    "Father",
+    "Skill Collector",
     "Music Producer",
     "Full Stack Developer",
+    "Bee Keeper",
+    "Investor",
     "Jiu-Jitsu Purple Belt",
   ],
   typeSpeed: 90,
