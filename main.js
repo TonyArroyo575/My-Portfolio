@@ -28,6 +28,7 @@ document.querySelectorAll("header nav a").forEach((link) => {
 let typed = new Typed("#auto-input", {
   strings: [
     ".NET Developer",
+    "Azure AI Systems Engineer",
     "Husband",
     "Father",
     "Skill Collector",
